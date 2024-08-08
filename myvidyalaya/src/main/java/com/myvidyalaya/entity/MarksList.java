@@ -7,20 +7,25 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
+@Entity
 @Setter
 @Getter
-@Entity
-public class Attendance {
+public class MarksList {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long student_id;
-    private Long faculty_id;
     private Long parent_id;
-    private String month;
-    private int year;
-    private int total_days;
-    private int present_days;
-    private int absent_days;
+    private Long teacher_id;
+    private int sub1_marks;
+    private int sub2_marks;
+    private int sub3_marks;
+    private int sub4_marks;
+    private int sub5_marks;
+    private int sub6_marks;
+    private int total_marks;
+    private float percentage;
+    private String grade;
+
 }
