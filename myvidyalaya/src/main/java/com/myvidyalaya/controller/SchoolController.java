@@ -3,6 +3,7 @@ package com.myvidyalaya.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +15,7 @@ import com.myvidyalaya.repository.SchoolRepository;
 
 @RestController
 @RequestMapping("/schools")
+@CrossOrigin(origins = "*")
 public class SchoolController {
 
     @Autowired
@@ -26,6 +28,7 @@ public class SchoolController {
 
     @PostMapping
     public School createSchool(@RequestBody School school) {
+        System.out.println("Received School: " + school.toString());
         return schoolRepository.save(school);
     }
 

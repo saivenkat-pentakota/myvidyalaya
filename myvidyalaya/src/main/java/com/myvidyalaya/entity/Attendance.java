@@ -18,8 +18,8 @@ public class Attendance {
     private Long student_id;
     private Long faculty_id;
     private Long parent_id;
-    private String month;
-    private int year;
+    private String academic_month;
+    private int academic_year;
     private int total_days;
     private int present_days;
     private int absent_days;

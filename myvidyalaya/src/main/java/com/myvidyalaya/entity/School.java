@@ -17,7 +17,7 @@ public class School {
     private Long id;
     private String school_firstname;
     private String school_lastName;
-    private int udisecode;
+    private long udisecode;
     private String email;
     private String phonenumber;
     private String address;
